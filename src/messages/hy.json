@@ -1,4 +1,9 @@
 {
+  "header": {
+    "projectSubmission": "ԴԻՄԵՔ 2024-ի կուրս",
+    "aboutProject": "Նախագծի մասին",
+    "contactUs": "Կապ մեզ հետ"
+  },
   "home": {
     "title": "Home վերնագիր"
   }

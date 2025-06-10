@@ -1,4 +1,9 @@
 {
+  "header": {
+    "projectSubmission": "Apply For Batch '24",
+    "aboutProject": "About The Project",
+    "contactUs": "Contact us"
+  },
   "home": {
     "title": "Home Title"
   }

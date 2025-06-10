@@ -1,11 +1,20 @@
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Header } from "@/components/Header";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import type { Metadata } from "next";
+
+import localFont from "next/font/local";
+
+import "../../styles/globals.css";
 
 const mardoto = localFont({
   src: [
+    {
+      path: "../../../public/fonts/Mardoto-Medium.ttf",
+      weight: "300",
+      style: "normal",
+    },
     {
       path: "../../../public/fonts/Mardoto-Regular.ttf",
       weight: "400",
@@ -40,7 +49,10 @@ const LocaleLayout: React.FC<Props> = async ({ params, children }) => {
   return (
     <html lang={locale}>
       <body className={`${mardoto.variable} antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
