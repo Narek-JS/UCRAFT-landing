@@ -41,25 +41,25 @@ export default function ProjectSubmission() {
   };
 
   return (
-    <main className="bg-[#f5f6fa] pt-[130px] pb-20 text-[rgba(0,0,0,0.85)]">
-      <div className="container mx-auto">
-        <div className="flex justify-center gap-10 items-start">
+    <main className="bg-[#f5f6fa] pt-[130px] pb-20 text-[rgba(0,0,0,0.85)] text-sm font-light">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row justify-center gap-10 items-start">
           {/* Left Side */}
-          <div className="w-[40%] max-w-[580px] sticky top-[130px] self-start flex flex-col gap-5">
-            <p className="text-lg font-light">
+          <div className="w-full lg:w-[40%] max-w-[580px] lg:sticky top-[130px] self-start flex flex-col gap-5 lg:mb-10">
+            <p className="text-base">
               Ստացեք ֆոնդ և ձեր գաղափարը դարձրեք իրականություն
             </p>
-            <h5 className="text-[40px] leading-[48px] font-normal font-[Sora, var(--base-text-font-family)]">
+            <h5 className="text-[32px] leading-[42px] font-normal font-[Sora, var(--base-text-font-family)]">
               Եթե դուք արհեստական բանականության ոլորտի ստարտափ եք և ունեք
-              գաղափար, եկե՛ք <br /> համախմբվենք
+              գաղափար, <br /> եկե՛ք համախմբվենք
             </h5>
           </div>
 
           {/* Right Side */}
-          <div className="w-[60%] max-w-[580px] bg-white rounded-xl">
+          <div className="w-full lg:w-[60%] max-w-[580px] bg-white rounded-xl">
             <div className="px-5 py-6">
-              <h2 className="text-xl font-semibold mb-2">Լրացրեք հայտը</h2>
-              <p className="text-lg font-light mb-6">
+              <h2 className="text-lg font-semibold mb-2">Լրացրեք հայտը</h2>
+              <p className="mb-6">
                 Պատմեք մեզ ձեր ստարտափի մասին, և մենք կկապվենք ձեզ հետ
               </p>
               <FormProvider {...methods}>
@@ -71,7 +71,6 @@ export default function ProjectSubmission() {
                   <RadioGroupField
                     name="groupType"
                     label="Ընտրեք այն պատասխանը, որը լավագույնս նկարագրում է ձեր խումբը"
-                    // required
                     options={[
                       { label: "Համալսարան", value: "university" },
                       {
@@ -92,13 +91,11 @@ export default function ProjectSubmission() {
                     name="orgName"
                     label="Ընկերության/խմբի/համալսարանի/ինստիտուտի անվանումը"
                     placeholder="Ձեր պատասխանը"
-                    // required
                   />
 
                   <RadioGroupField
                     name="funded"
                     label="Ձեր նախագիծը ֆինանսավորվում է պետական դրամաշնորհներից..."
-                    // required
                     options={[
                       { label: "Այո", value: "yes" },
                       { label: "Ոչ", value: "no" },
@@ -115,13 +112,11 @@ export default function ProjectSubmission() {
                     name="projectDesc"
                     label="Նկարագրեք ձեր նախագիծը (առավելագույնը 500 բառ)"
                     placeholder="Ձեր պատասխանը"
-                    // required
                   />
 
                   <SelectField
                     name="youngResearchers"
                     label="Քանի երիտասարդ հետազոտող է ներգրավված ձեր նախագծում"
-                    // required
                     options={[
                       { label: "1-2", value: "1-2" },
                       { label: "3-5", value: "3-5" },
@@ -132,7 +127,6 @@ export default function ProjectSubmission() {
                   <SelectField
                     name="readiness"
                     label="Խնդրում ենք գնահատել ձեր նախագիծն ըստ տեխնոլոգիական պատրաստվածության մակարդակի"
-                    // required
                     options={[
                       { label: "Low", value: "low" },
                       { label: "Medium", value: "medium" },
@@ -144,13 +138,11 @@ export default function ProjectSubmission() {
                     name="techNeeds"
                     label="Սահմանեք ձեր հետազոտական նախագծի հատուկ պահանջները..."
                     placeholder="Ձեր պատասխանը"
-                    // required
                   />
 
                   <SelectField
                     name="hpcChoice"
                     label="Խնդրում ենք ընտրել, թե ինչ HPC ռեսուրս է անհրաժեշտ..."
-                    // required
                     options={[
                       { label: "GPU", value: "gpu" },
                       { label: "CPU", value: "cpu" },
@@ -162,7 +154,6 @@ export default function ProjectSubmission() {
                     name="impactDesc"
                     label="Նկարագրեք ազդեցությունը. Արհեստական բանականության նախագծի հնարավոր ազդեցությունը..."
                     placeholder="Ձեր պատասխանը"
-                    // required
                   />
 
                   <FileUploadField
@@ -173,7 +164,6 @@ export default function ProjectSubmission() {
                   <RadioGroupField
                     name="duration"
                     label="Որքան ժամանակ եք նախատեսում օգտագործել անհրաժեշտ HPC ռեսուրսը"
-                    // required
                     options={[
                       { label: "up to 2 weeks", value: "2w" },
                       { label: "up to 4 weeks", value: "4w" },
@@ -190,13 +180,11 @@ export default function ProjectSubmission() {
                     name="capabilities"
                     label="Կարողությունների զարգացում..."
                     placeholder="Ձեր պատասխանը"
-                    // required
                   />
 
                   <RadioGroupField
                     name="community"
                     label="Աջակցել համայնքին..."
-                    // required
                     options={[
                       { label: "Այո", value: "yes" },
                       { label: "Ոչ", value: "no" },
@@ -211,7 +199,7 @@ export default function ProjectSubmission() {
 
                   <button
                     type="submit"
-                    className="bg-primary text-white px-6 py-2 rounded-full mr-8 text-sm font-medium cursor-pointer"
+                    className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium cursor-pointer w-full lg:w-auto"
                   >
                     Ուղարկել հայտը
                   </button>
